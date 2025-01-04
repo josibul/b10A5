@@ -11,66 +11,44 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-nav">
-    <!-- nav bar start -->
-    <!-- <nav >
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div >
-                <div  class="btn btn-ghost bg-lime-400">
-                  <button>Blog</button>
-                </div>
-                
-              </div>
-            </div>
-            <div class="navbar-center ">
-                <ul class="flex space-between space-x-2">
-                    <li>
-                        <img src="assets/logo.png" alt="">
-                    </li>
-                    <li>
-                        <h1 class="lexend-font text-xl font-semibold">Donate Bangladesh</h1>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-end">
-              <img src="assets/coin.png" alt="">
-              <h1 class="lexend-font">5500BDT</h1>
-            </div>
-          </div>
-    </nav> -->
-    <nav>
-        <div class="navbar bg-neutral-100 flex justify-between items-center px-4">
+     <nav class="sticky top-0 z-50">
+        <div class=" bg-neutral-100 shadow-md  navbar flex justify-between items-center px-4 py-2">
           <!-- Navbar Start -->
-          <div class="navbar-start pl-16 ">
-            <button class="btn btn-ghost bg-lime-400 ">Blog</button>
+          <div class="navbar-start pl-4 md:pl-16">
+            <button id="blogButton" class="btn btn-ghost bg-lime-400 text-black font-semibold hover:bg-lime-500">
+              Blog
+            </button>
           </div>
+      
           <!-- Navbar Center -->
           <div class="navbar-center flex items-center space-x-2">
             <img src="assets/logo.png" alt="Donate Bangladesh Logo" class="h-8">
-            <h1 class="lexend-font text-xl font-semibold">Donate Bangladesh</h1>
+            <h1 class="lexend-font text-xl md:text-2xl font-semibold">Donate Bangladesh</h1>
           </div>
+      
           <!-- Navbar End -->
-          <div class="navbar-end flex items-center space-x-2 pr-10">
+          <div class="navbar-end flex items-center space-x-2 pr-4 md:pr-10">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="lexend-font text-lg">5500BDT</h1>
+            <h1 class="lexend-font text-lg md:text-xl">5500 BDT</h1>
           </div>
         </div>
-      </nav>
+        <!-- button part -->
+    <div class="  bg-white  flex justify-center items-center pb-2 pt-2">
+        <button class="px-4 py-2 bg-lime-400 text-black font-bold rounded">Donation</button>
+        <button class="px-4 py-2 border border-gray-400 text-black rounded ml-4">History</button>
+    </div>
       
-     <!-- nav bar end -->
+      </nav>
+       
 
     <main class="py-20 px-40">
-        <!-- button part -->
-        <div class="flex justify-center items-center">
-            <button class="px-4 py-2 bg-lime-400 text-black font-bold rounded">Donation</button>
-            <button class="px-4 py-2 border border-gray-400 text-black rounded ml-4">History</button>
-          </div>
+       
 
        <!-- card part -->
         
        <!-- card 1 -->
 
-       <div class="card lg:card-side bg-base-100 shadow-xl p-5">
+       <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-3">
         <!-- Left Image Section -->
         <img class="w-full lg:w-1/2 object-cover rounded-lg" src="assets/noakhali.png" alt="Flood relief in Noakhali, Bangladesh">
       
@@ -97,10 +75,10 @@
             </button>
           </div>
         </div>
-      </div>
+       </div>
 
       <!-- card -2 -->
-      <div class="card lg:card-side bg-base-100 shadow-xl p-5">
+      <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-3">
         <!-- Left Image Section -->
         <img class="w-full lg:w-1/2 object-cover rounded-lg" src="assets/noakhali.png" alt="Flood relief in Noakhali, Bangladesh">
       
@@ -109,13 +87,13 @@
           <!-- Donation Header -->
           <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="text-lg font-bold">0 BDT</h1>
+            <h1 class="text-lg font-bold">600 BDT</h1>
           </div>
       
           <!-- Title and Description -->
-          <h1 class="text-2xl font-semibold mt-4">Donate for Flood at Noakhali, Bangladesh</h1>
+          <h1 class="text-2xl font-semibold mt-4">Donate for Flood Relief in Feni,Bangladesh</h1>
           <p class="text-gray-600 mt-2">
-            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+            The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
           </p>
       
           <!-- Donation Input and Button -->
@@ -130,7 +108,7 @@
       </div>
 
       <!-- card -3 -->
-      <div class="card lg:card-side bg-base-100 shadow-xl p-5">
+      <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-3">
         <!-- Left Image Section -->
         <img class="w-full lg:w-1/2 object-cover rounded-lg" src="assets/feni.png" alt="">
       
@@ -139,13 +117,13 @@
           <!-- Donation Header -->
           <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="text-lg font-bold">600 BDT</h1>
+            <h1 class="text-lg font-bold">2400 BDT</h1>
           </div>
       
           <!-- Title and Description -->
-          <h1 class="text-2xl font-semibold mt-4">Donate for Flood Relief in Feni,Bangladesh</h1>
+          <h1 class="text-2xl font-semibold mt-4">Aid for Injured in the Quota Movement</h1>
           <p class="text-gray-600 mt-2">
-            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+            The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
           </p>
       
           <!-- Donation Input and Button -->
@@ -171,6 +149,17 @@
           
 
     </main>
+   
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('homeButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = '/blog.html';
+          });
+        });
+      </script> -->
+      
+     <script src="js/utilitis.js"></script>
+    <script src="js/indexscript.js"></script>
 
     
 </body>
