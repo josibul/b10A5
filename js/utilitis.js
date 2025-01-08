@@ -18,6 +18,8 @@ function getInputRequiedFieldById(id){
 
 function showSectionById(id){
     document.getElementById('donation-conatiner').classList.add('hidden');
+    document.getElementById('transection-container').classList.add('hidden');
+    
     
     document.getElementById(id).classList.remove('hidden')
 }

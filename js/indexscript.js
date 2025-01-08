@@ -147,6 +147,73 @@ document.getElementById('btn-dnt-feni').addEventListener('click',function(event)
 })
 
 // donation for aid of qouta
+document.getElementById('btn-dnt-qaid').addEventListener('click',function(event){
+    event.preventDefault();
+    const addMoney=getInputValueFieldById('input-amount-for-qaid');
+    
+
+    if (!isNaN(addMoney) && addMoney > 0) {
+        
+        const balanceOfQaid=getInputTextFieldById('balanc-qaid');
+        const requiredBalance=getInputRequiedFieldById ('requirdDonation')
+        
+
+        const newBalanceOfQaid= addMoney +balanceOfQaid;
+        const newRequiredOfNoakhali= requiredBalance-addMoney;
+
+        document.getElementById('balanc-qaid').innerText=newBalanceOfQaid;
+        document.getElementById('requirdDonation').innerText=newRequiredOfNoakhali;
+
+        const openModalBtn = document.getElementById('btn-dnt-qaid');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('modal');
+
+         openModalBtn.addEventListener('click', () => {
+         modal.classList.remove('hidden');
+         });
+
+        closeModalBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+         });
+
+        const pal =document.createElement('div');
+  
+        const now = new Date(); // Get the current date and time
+        const gmtString = now.toUTCString(); // Convert to UTC string
+        const timeZoneOffset = now.getTimezoneOffset(); // Get the timezone offset in minutes
+        const offsetHours = String(Math.abs(timeZoneOffset / 60)).padStart(2, '0');
+        const offsetMinutes = String(Math.abs(timeZoneOffset % 60)).padStart(2, '0');
+        const offsetSign = timeZoneOffset <= 0 ? '+' : '-';
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Get the local timezone name
+            
+
+        
+        pal.classList.add(
+                    "border", 
+                    "border-gray-300", 
+                    "p-4", 
+                    "rounded-lg", 
+                    "bg-gray-50", 
+                    "shadow-sm"
+                  );
+        pal.innerHTML=`
+        <p class="text-lg font-semibold">${addMoney} Taka is Donated for  injured people in qouta movement</p>
+        <p> ${gmtString} GMT ${offsetSign}${offsetHours}${offsetMinutes} (${timeZone})</P>
+        `
+        
+        document.getElementById('transaction-history').appendChild(pal);
+        
+     }
+          
+
+    
+     else {
+        alert('Put the right amount (positive number)');
+      }
+
+
+
+})
 
 
 
