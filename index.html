@@ -29,19 +29,23 @@
           <!-- Navbar End -->
           <div class="navbar-end flex items-center space-x-2 pr-4 md:pr-10">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="lexend-font text-lg md:text-xl">5500 BDT</h1>
+            <h1 id="requirdDonation"  class="lexend-font text-lg md:text-xl">5500 </h1> <p>BDT</p>
           </div>
         </div>
         <!-- button part -->
     <div class="  bg-white  flex justify-center items-center pb-2 pt-2">
-        <button class="px-4 py-2 bg-lime-400 text-black font-bold rounded">Donation</button>
-        <button class="px-4 py-2 border border-gray-400 text-black rounded ml-4">History</button>
+        <button id="btn-donation" class="px-4 py-2 bg-lime-400 text-black font-bold rounded">Donation</button>
+        <button id="btn-history" class="px-4 py-2 border border-gray-400 text-black rounded ml-4">History</button>
     </div>
       
       </nav>
        
 
     <main class="py-20 px-40">
+
+    <div id="donation-conatiner" class="">
+
+        
        
 
        <!-- card part -->
@@ -57,7 +61,7 @@
           <!-- Donation Header -->
           <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="text-lg font-bold">0 BDT</h1>
+            <h1 id="balanc-noakhali" class="text-lg font-bold">0 </h1> <p>BDT</p>
           </div>
       
           <!-- Title and Description -->
@@ -68,14 +72,14 @@
       
           <!-- Donation Input and Button -->
           <div class="mt-4">
-            <input type="text" placeholder="Write Donation Amount" 
+            <input id="input-amount-for-noakhali" type="text" placeholder="Write Donation Amount" 
                    class="input input-bordered w-full mb-3 p-3 rounded-lg">
-            <button class="btn bg-lime-400 text-white w-full py-3 rounded-lg font-bold">
+            <button id="btn-dnt-noakhali" class="btn bg-lime-400 text-white w-full py-3 rounded-lg font-bold">
               Donate Now
             </button>
           </div>
         </div>
-       </div>
+    </div>
 
       <!-- card -2 -->
       <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-3">
@@ -87,7 +91,7 @@
           <!-- Donation Header -->
           <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin Icon" class="h-6">
-            <h1 class="text-lg font-bold">600 BDT</h1>
+            <h1 id="balanc-feni" class="text-lg font-bold">600 </h1><p>BDT</p>
           </div>
       
           <!-- Title and Description -->
@@ -98,9 +102,9 @@
       
           <!-- Donation Input and Button -->
           <div class="mt-4">
-            <input type="text" placeholder="Write Donation Amount" 
+            <input id="input-amount-for-feni" type="text" placeholder="Write Donation Amount" 
                    class="input input-bordered w-full mb-3 p-3 rounded-lg">
-            <button class="btn bg-lime-400 text-white w-full py-3 rounded-lg font-bold">
+            <button id="btn-dnt-feni"  class="btn  bg-lime-400 text-white w-full py-3 rounded-lg font-bold">
               Donate Now
             </button>
           </div>
@@ -128,7 +132,7 @@
       
           <!-- Donation Input and Button -->
           <div class="mt-4">
-            <input type="text" placeholder="Write Donation Amount" 
+            <input type="number" placeholder="Write Donation Amount" 
                    class="input input-bordered w-full mb-3 p-3 rounded-lg">
             <button class="btn bg-lime-400 text-white w-full py-3 rounded-lg font-bold">
               Donate Now
@@ -136,30 +140,48 @@
           </div>
         </div>
       </div>
-      
-      
 
-     
-       
-      
-
-   
-        
+       <!-- Modal -->
+        <div
+          id="modal"class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <h2 class="text-xl font-bold text-center mb-4">Congrats!</h2>
+            <div class="text-center text-2xl mb-4">
+              <span class="inline-block text-yellow-400"><img src="assets/coin.png" alt=""></span>
+            </div>
+            <p class="text-center text-gray-600 mb-6">
+              You Have Donated for Humankind <br /> Successfully
+            </p>
+            <button id="closeModalBtn" class="block mx-auto px-4 py-2 bg-gray-200 text-black font-semibold rounded-lg hover:bg-gray-200">
+              Close Confirmation
+            </button>
+          </div>
+        </div>
+    </div>
+    <div id="transection-container" class="hidden">
+        <div id="historyContainer" class="w-3/4 bg-white p-4 rounded-lg shadow-md">
           
-          
+            <div id="transaction-history" class=" bg-white p-6 rounded-lg space-y-4">
+                
+            <div id="dateOutput">
 
+            </div>  
+            </div>
+            
+         </div>
+
+    </div>
+
+
+
+    
+      
     </main>
-   
-        document.addEventListener('DOMContentLoaded', function() {
-          document.getElementById('homeButton').addEventListener('click', function(event) {
-            event.preventDefault();
-            window.location.href = '/blog.html';
-          });
-        });
-      </script> -->
-      
-     <script src="js/utilitis.js"></script>
-    <script src="js/indexscript.js"></script>
+    <script src="js/utilitis.js"></script>
+    <script src="js/indexscript.js"></script>   
+    
+    
+    
 
     
 </body>
